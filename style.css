@@ -10,49 +10,43 @@ body{
 
 .container{
   background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
+  padding: 25px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
   text-align: center;
-  width: 300px;
+  width: 350px;
   color: white;
-  box-shadow:  0 8px 32px rgba(0,0,0,0.2);
-  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 .search-box{
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .search-box input{
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 8px 0 0 8px;
+  border-radius: 10px 0 0 10px;
   font-size: 16px;
   outline: none;
 }
 
 .search-box button{
-  padding: 10px;
+  padding: 12px;
   background: #ff9800;
   border: none;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 10px 10px 0;
   font-size: 18px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .search-box button:hover{
@@ -60,28 +54,27 @@ body{
 }
 
 .weather-info{
-  animation: slideup 0.5s ease-in-out;
+  margin-top: 15px;
+  animation: slideUp 0.6s ease-in-out;
 }
 
-@keyframes slideup {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 #weatherIcon{
-  width: 80px;
-  margin: 10px 0;
+  width: 100px;
+  margin: 15px 0;
+  transition: transform 0.3s;
+}
+
+#weatherIcon:hover{
+  transform: scale(1.2);
 }
 
 #temperature{
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 5px 0;
 }
 
